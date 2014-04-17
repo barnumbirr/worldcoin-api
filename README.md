@@ -1,0 +1,1 @@
+<h1><img src="https://raw.github.com/c0ding/worldcoin-api/master/doc/worldcoin.png" height=55 alt="worldcoin" title="worldcoin"> worldcoin-api</h1>
