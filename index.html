@@ -32,26 +32,136 @@
 <a name="-worldcoin-api" class="anchor" href="#-worldcoin-api"><span class="octicon octicon-link"></span></a><img src="https://raw.github.com/c0ding/worldcoin-api/master/doc/worldcoin.png" height="55" alt="worldcoin" title="worldcoin"> worldcoin-api</h1>
 
 <h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
-
-<pre><code>&gt;&gt;&gt; import worldcoin
-&gt;&gt;&gt; worldcoin.get_difficulty()
-&gt;&gt;&gt; 16.26932454
-&gt;&gt;&gt; worldcoin.get_block_count()
-&gt;&gt;&gt; 1203137
-&gt;&gt;&gt; worldcoin.get_total_wdc()
-&gt;&gt;&gt; 52345602.5535
-</code></pre>
-
-<h2>
-<a name="more-about-worldcoin" class="anchor" href="#more-about-worldcoin"><span class="octicon octicon-link"></span></a>More about Worldcoin</h2>
+<a name="more-about-worldcoin" class="anchor" href="#more-about-worldcoin"><span class="octicon octicon-link"></span></a>More about Worldcoin:</h2>
 
 <p>WorldCoin is designed to be the digital currency of the future. At the forefront is it's' blazing fast speed. Your transaction will be fully confirmed in about 60 seconds or less.</p>
 
 <p>The major goal is to become the cryptocurrency of choice for merchants and consumers for their everyday transaction, whether it be a cup of coffee or a bigger ticket item. Speed and security makes all of this possible. Blazing fast speeds make WorldCoin the best way to pay for everyday transactions. Transactions are fully confirmed in about 60 seconds. Transfer money to your friends and family instantly with just a few clicks. WorldCoin is also based on sound money principals which makes it the smart choice for wealth preservation. It is designed to appreciate in value over time, unlike paper currency. This is due to the fact that only 265 million coins will ever be produced. These advantages are what makes Worldcoin the leading choice for users.</p>
 
 <h2>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+<a name="api-documentation" class="anchor" href="#api-documentation"><span class="octicon octicon-link"></span></a>API Documentation:</h2>
+
+<h3>
+<a name="network" class="anchor" href="#network"><span class="octicon octicon-link"></span></a>Network:</h3>
+
+<ul>
+<li>Difficulty:</li>
+</ul><pre><code>&gt;&gt;&gt; import worldcoin
+&gt;&gt;&gt; worldcoin.get_difficulty()
+&gt;&gt;&gt; 19.12163587
+</code></pre>
+
+<ul>
+<li>Hashrate:</li>
+</ul><pre><code>&gt;&gt;&gt; worldcoin.get_hashrate()
+&gt;&gt;&gt; 1643421348
+</code></pre>
+
+<ul>
+<li>Block count:</li>
+</ul><pre><code>&gt;&gt;&gt; worldcoin.block_count()
+&gt;&gt;&gt; 1205465
+</code></pre>
+
+<ul>
+<li>Total coins:</li>
+</ul><pre><code>&gt;&gt;&gt; worldcoin.total_coins()
+&gt;&gt;&gt; 52455474.3611
+</code></pre>
+
+<h3>
+<a name="blocks" class="anchor" href="#blocks"><span class="octicon octicon-link"></span></a>Blocks:</h3>
+
+<ul>
+<li>Block hash:
+[PARAMETER] is optional, should be a block hash or height.
+[DEFAULT] equals to last block.</li>
+</ul><pre><code>&gt;&gt;&gt; worldcoin.block_hash(PARAMETER)
+{
+    "PreviousBlock": "", 
+    "Hash": "1a48c2bf97e0df6d4f03cd5cb0896ef43b04987048fbeb5ab2dc013335e40731", 
+    "Transactions": [
+        "0fc36e386282295512aa63d9f5047d9dc305c983394803474cfaa2f99d7e1bd0"
+    ], 
+    "NextBlock": "b439caa3baf7e8f6532783ef630ff18293f237da42d3cc8975620d3e3ca96bb3", 
+    "Height": 1, 
+    "Time": 1368504801
+}
+</code></pre>
+
+<h3>
+<a name="transactions" class="anchor" href="#transactions"><span class="octicon octicon-link"></span></a>Transactions:</h3>
+
+<ul>
+<li>Transaction:
+[PARAMETER] is required and should be a transaction hash.</li>
+</ul><pre><code>&gt;&gt;&gt; worldcoin.transaction(PARAMETER)
+{
+    "Inputs": [], 
+    "Hash": "0fc36e386282295512aa63d9f5047d9dc305c983394803474cfaa2f99d7e1bd0", 
+    "Outputs": [
+        {
+            "Index": 0, 
+            "Amount": 32.0, 
+            "Address": "WYJ142WhSViiCJuUB2JbpbNiCFAuk9B47z"
+        }
+    ], 
+    "Block": "1a48c2bf97e0df6d4f03cd5cb0896ef43b04987048fbeb5ab2dc013335e40731", 
+    "Time": 1368504801
+}
+</code></pre>
+
+<h3>
+<a name="addresses" class="anchor" href="#addresses"><span class="octicon octicon-link"></span></a>Addresses:</h3>
+
+<ul>
+<li>Address:
+[PARAMETER] is required and should be an address hash.</li>
+</ul><pre><code>&gt;&gt;&gt; worldcoin.address(PARAMETER)
+{
+    "RichListRank": 45011, 
+    "TotalSent": 32.0, 
+    "Balance": 0.0, 
+    "Hash": "WYJ142WhSViiCJuUB2JbpbNiCFAuk9B47z", 
+    "TotalReceived": 32.0
+}
+</code></pre>
+
+<h3>
+<a name="exchanges" class="anchor" href="#exchanges"><span class="octicon octicon-link"></span></a>Exchanges:</h3>
+
+<ul>
+<li>BTC:</li>
+</ul><pre><code>&gt;&gt;&gt; worldcoin.to_btc()
+{
+    "latest_trade": "2014-04-18 11:23:30", 
+    "volume_btc": "58.24", 
+    "price": "0.00009061", 
+    "price_before_24h": "0.00008404", 
+    "volume_first": "624421.07441386", 
+    "best_market": "cryptsy", 
+    "volume_second": "58.2372003281511", 
+    "id": "wdc/btc"
+}
+</code></pre>
+
+<ul>
+<li>USD:</li>
+</ul><pre><code>&gt;&gt;&gt; worldcoin.to_usd()
+{
+    "latest_trade": "2014-04-18 14:41:33", 
+    "volume_btc": "0.04", 
+    "price": "0.05500000", 
+    "price_before_24h": "0.05799300", 
+    "volume_first": "391.214920043945", 
+    "best_market": "crypto-trade", 
+    "volume_second": "21.4769533276558", 
+    "id": "wdc/usd"
+}
+</code></pre>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License:</h2>
 
 <pre><code>  Apache v2.0 License
   Copyright 2014 Martin Simon
@@ -71,7 +181,7 @@
 </code></pre>
 
 <h2>
-<a name="useful-links" class="anchor" href="#useful-links"><span class="octicon octicon-link"></span></a>Useful links</h2>
+<a name="useful-links" class="anchor" href="#useful-links"><span class="octicon octicon-link"></span></a>Useful links:</h2>
 
 <ul>
 <li><a href="http://www.worldcoinalliance.net/">Worldcoin Alliance</a></li>
