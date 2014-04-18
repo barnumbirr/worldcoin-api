@@ -53,7 +53,7 @@ def total_coins():
 
 def block_hash(PARAMETER=None):
 	"""Returns the block hash at a specific height.
-	   [PARAMETER] is optimal, should be a block hash or height.
+	   [PARAMETER] is optional, should be a block hash or height.
 	   [DEFAULT] equals to last block.
 	"""
 	if not PARAMETER:

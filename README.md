@@ -1,24 +1,138 @@
 <h1><img src="https://raw.github.com/c0ding/worldcoin-api/master/doc/worldcoin.png" height=55 alt="worldcoin" title="worldcoin"> worldcoin-api</h1>
 
-## Usage
-
-```
->>> import worldcoin
->>> worldcoin.get_difficulty()
->>> 16.26932454
->>> worldcoin.get_block_count()
->>> 1203137
->>> worldcoin.get_total_wdc()
->>> 52345602.5535
-```
-
-## More about Worldcoin
+## More about Worldcoin:
 
 WorldCoin is designed to be the digital currency of the future. At the forefront is it's' blazing fast speed. Your transaction will be fully confirmed in about 60 seconds or less.
 
 The major goal is to become the cryptocurrency of choice for merchants and consumers for their everyday transaction, whether it be a cup of coffee or a bigger ticket item. Speed and security makes all of this possible. Blazing fast speeds make WorldCoin the best way to pay for everyday transactions. Transactions are fully confirmed in about 60 seconds. Transfer money to your friends and family instantly with just a few clicks. WorldCoin is also based on sound money principals which makes it the smart choice for wealth preservation. It is designed to appreciate in value over time, unlike paper currency. This is due to the fact that only 265 million coins will ever be produced. These advantages are what makes Worldcoin the leading choice for users.
 
-## License
+
+## API Documentation:
+
+### Network:
+
+  - Difficulty:
+
+```
+>>> import worldcoin
+>>> worldcoin.get_difficulty()
+>>> 19.12163587
+```
+
+  - Hashrate:
+
+```
+>>> worldcoin.get_hashrate()
+>>> 1643421348
+```
+
+  - Block count:
+
+```
+>>> worldcoin.block_count()
+>>> 1205465
+```
+
+  - Total coins:
+
+```
+>>> worldcoin.total_coins()
+>>> 52455474.3611
+```
+
+### Blocks:
+
+  - Block hash:
+    [PARAMETER] is optional, should be a block hash or height.
+    [DEFAULT] equals to last block.
+
+```
+>>> worldcoin.block_hash(PARAMETER)
+{
+    "PreviousBlock": "", 
+    "Hash": "1a48c2bf97e0df6d4f03cd5cb0896ef43b04987048fbeb5ab2dc013335e40731", 
+    "Transactions": [
+        "0fc36e386282295512aa63d9f5047d9dc305c983394803474cfaa2f99d7e1bd0"
+    ], 
+    "NextBlock": "b439caa3baf7e8f6532783ef630ff18293f237da42d3cc8975620d3e3ca96bb3", 
+    "Height": 1, 
+    "Time": 1368504801
+}
+```
+
+### Transactions:
+
+  - Transaction:
+    [PARAMETER] is required and should be a transaction hash.
+
+```
+>>> worldcoin.transaction(PARAMETER)
+{
+    "Inputs": [], 
+    "Hash": "0fc36e386282295512aa63d9f5047d9dc305c983394803474cfaa2f99d7e1bd0", 
+    "Outputs": [
+        {
+            "Index": 0, 
+            "Amount": 32.0, 
+            "Address": "WYJ142WhSViiCJuUB2JbpbNiCFAuk9B47z"
+        }
+    ], 
+    "Block": "1a48c2bf97e0df6d4f03cd5cb0896ef43b04987048fbeb5ab2dc013335e40731", 
+    "Time": 1368504801
+}
+```
+
+### Addresses:
+
+  - Address:
+    [PARAMETER] is required and should be an address hash.
+
+```
+>>> worldcoin.address(PARAMETER)
+{
+    "RichListRank": 45011, 
+    "TotalSent": 32.0, 
+    "Balance": 0.0, 
+    "Hash": "WYJ142WhSViiCJuUB2JbpbNiCFAuk9B47z", 
+    "TotalReceived": 32.0
+}
+```
+
+### Exchanges:
+
+  - BTC:
+
+```
+>>> worldcoin.to_btc()
+{
+    "latest_trade": "2014-04-18 11:23:30", 
+    "volume_btc": "58.24", 
+    "price": "0.00009061", 
+    "price_before_24h": "0.00008404", 
+    "volume_first": "624421.07441386", 
+    "best_market": "cryptsy", 
+    "volume_second": "58.2372003281511", 
+    "id": "wdc/btc"
+}
+```
+
+  - USD:
+
+```
+>>> worldcoin.to_usd()
+{
+    "latest_trade": "2014-04-18 14:41:33", 
+    "volume_btc": "0.04", 
+    "price": "0.05500000", 
+    "price_before_24h": "0.05799300", 
+    "volume_first": "391.214920043945", 
+    "best_market": "crypto-trade", 
+    "volume_second": "21.4769533276558", 
+    "id": "wdc/usd"
+}
+```
+
+## License:
 
 ```
   Apache v2.0 License
@@ -38,7 +152,7 @@ The major goal is to become the cryptocurrency of choice for merchants and consu
 
 ```
 
-## Useful links
+## Useful links:
 
 * [Worldcoin Alliance](http://www.worldcoinalliance.net/)
 * [Worldcoin Forum](http://worldcoinforum.org/)
