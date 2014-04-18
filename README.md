@@ -1,5 +1,7 @@
 <h1><img src="https://raw.github.com/c0ding/worldcoin-api/master/doc/worldcoin.png" height=55 alt="worldcoin" title="worldcoin"> worldcoin-api</h1>
 
+worldcoin is an APACHE licensed library written in Python created to provide an API for the Worldcoin cryptocurrency.
+
 ## More about Worldcoin:
 
 WorldCoin is designed to be the digital currency of the future. At the forefront is it's' blazing fast speed. Your transaction will be fully confirmed in about 60 seconds or less.
@@ -8,6 +10,8 @@ The major goal is to become the cryptocurrency of choice for merchants and consu
 
 
 ## API Documentation:
+
+This API can currently retrieve the following stats from [worldcoinexplorer.com](http://www.worldcoinexplorer.com/) and [CryptoCoin](http://www.cryptocoincharts.info):
 
 ### Network:
 
@@ -156,6 +160,7 @@ The major goal is to become the cryptocurrency of choice for merchants and consu
 
 * [Worldcoin Alliance](http://www.worldcoinalliance.net/)
 * [Worldcoin Forum](http://worldcoinforum.org/)
+* [worldcoinexplorer.com](http://www.worldcoinexplorer.com/)
 * [Worldcoin Wiki](http://www.wdcwiki.org/wiki/Main_Page)
 
 ## Buy me a coffee?
