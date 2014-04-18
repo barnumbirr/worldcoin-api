@@ -1,13 +1,13 @@
   
    Analyzing: https://github.com/c0ding/worldcoin-api/blob/master/worldcoin/api.py
 
-              Total Lines: 88
+              Total Lines: 93
 
-               Code Lines: 44 (50.0%)
-              Blank Lines: 27 (30.6818%)
+               Code Lines: 49 (52.6881%)
+              Blank Lines: 26 (27.9569%)
 
-            Comment Lines: 1 (1.13636%)
-         Doc String Lines: 16 (18.1818%)
+            Comment Lines: 1 (1.07526%)
+         Doc String Lines: 17 (18.2795%)
           Inline Comments: 1
               Doc Strings: 8
            Total Comments: 10
@@ -21,11 +21,11 @@
                   Imports: 4
                 Functions: 9
                   Classes: 0
-            If Statements: 0
+            If Statements: 2
            Try Statements: 0
         Except Statements: 0
          Print Statements: 0
-              Assignments: 26
+              Assignments: 29
                 Variables: 5
 
 
@@ -106,18 +106,18 @@
 
   Analyzing: https://github.com/c0ding/worldcoin-api/blob/master/tests/test_worldcoin.py
 
-              Total Lines: 39
+              Total Lines: 47
 
-               Code Lines: 26 (66.6666%)
-              Blank Lines: 12 (30.7692%)
+               Code Lines: 34 (72.3404%)
+              Blank Lines: 12 (25.5319%)
 
-            Comment Lines: 1 (2.56410%)
+            Comment Lines: 1 (2.12765%)
          Doc String Lines: 0 (0.0%)
           Inline Comments: 1
               Doc Strings: 0
            Total Comments: 2
 
-        Longest Code Line: 115
+        Longest Code Line: 111
        Shortest Code Line: 15 [unittest.main()]
 
      Longest Comment Line: 23

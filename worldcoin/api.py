@@ -7,7 +7,7 @@ from utils import exchange
 from utils import blockexplorer
 
 __title__   = 'worldcoin'
-__version__ = '0.2'
+__version__ = '0.4'
 __author__  = "@c0ding"
 __repo__    = "https://github.com/c0ding/worldcoin-api"
 __license__ = "Apache v2.0 License"
@@ -16,7 +16,7 @@ __license__ = "Apache v2.0 License"
 def about():
 	return "{} v.{} is maintained by {} and available at {}.".format(__title__, __version__, __author__, __repo__)
 
-def get_difficulty():
+def difficulty():
 	"""Returns the current network difficulty."""
 
 	d = urllib.urlopen(blockexplorer('coindetails'))
@@ -24,7 +24,7 @@ def get_difficulty():
 	return d[u'Difficulty']
 
 
-def get_block_count():
+def block_count():
 	"""Returns the number of blocks in the longest block chain.
 	   Equivalent to Bitcoin's getblockcount.
 	"""
@@ -34,7 +34,7 @@ def get_block_count():
 	return d[u'Blocks']
 
 
-def get_total_wdc():
+def total_coins():
 	"""Returns the number of Worldcoin mined."""
 	
 	d = urllib.urlopen(blockexplorer('coindetails'))
@@ -42,17 +42,22 @@ def get_total_wdc():
 	return d[u'TotalCoins']
 
 
-def get_block_hash(PARAMETER):
+def block_hash(PARAMETER=None):
 	"""Returns the block hash at a specific height.
-	   [PARAMETER] is required and should be a block hash or height.
+	   [PARAMETER] is optimal, should be a block hash or height.
+	   [DEFAULT] equals to last block.
 	"""
-
-	d = urllib.urlopen(blockexplorer('block') + '/' + str(PARAMETER))
-	d = json.loads(d.read())
-	return json.dumps(d, indent=4)
+	if not PARAMETER:
+		d = urllib.urlopen(blockexplorer('block'))
+		d = json.loads(d.read())
+		return json.dumps(d, indent=4)
+	else:
+		d = urllib.urlopen(blockexplorer('block') + '/' + str(PARAMETER))
+		d = json.loads(d.read())
+		return json.dumps(d, indent=4)
 	
 
-def get_transaction(PARAMETER):
+def transaction(PARAMETER):
 	"""Returns details of a specific transaction.
 	   [PARAMETER] is required and should be a transaction hash.
 	"""
@@ -62,7 +67,7 @@ def get_transaction(PARAMETER):
 	return json.dumps(d, indent=4)
 
 
-def get_address(PARAMETER):
+def address(PARAMETER):
 	"""Returns details of a specific address.
 	   [PARAMETER] is required and should be an address hash.
 	"""
