@@ -3,8 +3,8 @@
 
 import json
 import urllib
-from utils import exchange
-from utils import blockexplorer
+from worldcoin_utils import exchange
+from worldcoin_utils import blockexplorer
 
 __title__   = 'worldcoin'
 __version__ = '0.5'

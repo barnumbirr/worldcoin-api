@@ -1,6 +1,6 @@
 <h1><img src="https://raw.github.com/c0ding/worldcoin-api/master/doc/worldcoin.png" height=55 alt="worldcoin" title="worldcoin"> worldcoin-api</h1>
 
-worldcoin is an APACHE licensed library written in Python created to provide an API for the Worldcoin cryptocurrency.
+worldcoin is an APACHE licensed library written in Python designed to provide a simple to use API for the Worldcoin cryptocurrency.
 
 ## More about Worldcoin:
 
@@ -8,6 +8,15 @@ WorldCoin is designed to be the digital currency of the future. At the forefront
 
 The major goal is to become the cryptocurrency of choice for merchants and consumers for their everyday transaction, whether it be a cup of coffee or a bigger ticket item. Speed and security makes all of this possible. Blazing fast speeds make WorldCoin the best way to pay for everyday transactions. Transactions are fully confirmed in about 60 seconds. Transfer money to your friends and family instantly with just a few clicks. WorldCoin is also based on sound money principals which makes it the smart choice for wealth preservation. It is designed to appreciate in value over time, unlike paper currency. This is due to the fact that only 265 million coins will ever be produced. These advantages are what makes Worldcoin the leading choice for users.
 
+## Installation:
+
+From source use
+
+    $ python setup.py install
+
+or install from PyPi
+
+    $ pip install worldcoin
 
 ## API Documentation:
 
@@ -20,28 +29,28 @@ This API can currently retrieve the following stats from [worldcoinexplorer.com]
 ```
 >>> import worldcoin
 >>> worldcoin.get_difficulty()
->>> 19.12163587
+19.12163587
 ```
 
   - Hashrate:
 
 ```
 >>> worldcoin.get_hashrate()
->>> 1643421348
+1643421348
 ```
 
   - Block count:
 
 ```
 >>> worldcoin.block_count()
->>> 1205465
+1205465
 ```
 
   - Total coins:
 
 ```
 >>> worldcoin.total_coins()
->>> 52455474.3611
+52455474.3611
 ```
 
 ### Blocks:
