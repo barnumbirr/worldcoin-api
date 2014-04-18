@@ -43,3 +43,11 @@ The major goal is to become the cryptocurrency of choice for merchants and consu
 * [Worldcoin Alliance](http://www.worldcoinalliance.net/)
 * [Worldcoin Forum](http://worldcoinforum.org/)
 * [Worldcoin Wiki](http://www.wdcwiki.org/wiki/Main_Page)
+
+## Buy me a coffee?
+
+If you feel like buying me a coffee (or a beer?), donations are welcome:
+
+```
+WbcWJzVD8yXt3yLnnkCZtwQo4YgSUdELkj
+```
