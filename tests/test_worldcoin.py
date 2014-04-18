@@ -14,6 +14,10 @@ class worldcointestsuite(unittest.TestCase):
 	def test_difficulty(self):
 		worldcoin.difficulty()
 		assert type(worldcoin.difficulty()) is float
+		
+	def test_hashrate(self):
+		worldcoin.hashrate()
+		assert type(worldcoin.hashrate()) is int
 
 	def test_block_count(self):
 		worldcoin.block_count()

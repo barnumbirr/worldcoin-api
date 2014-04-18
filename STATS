@@ -1,16 +1,16 @@
   
    Analyzing: https://github.com/c0ding/worldcoin-api/blob/master/worldcoin/api.py
 
-              Total Lines: 93
+              Total Lines: 102
 
-               Code Lines: 49 (52.6881%)
-              Blank Lines: 26 (27.9569%)
+               Code Lines: 53 (51.9607%)
+              Blank Lines: 30 (29.4117%)
 
-            Comment Lines: 1 (1.07526%)
-         Doc String Lines: 17 (18.2795%)
+            Comment Lines: 1 (0.98039%)
+         Doc String Lines: 18 (17.6470%)
           Inline Comments: 1
-              Doc Strings: 8
-           Total Comments: 10
+              Doc Strings: 9
+           Total Comments: 11
 
         Longest Code Line: 111
        Shortest Code Line: 19 [return d[u'Blocks']]
@@ -19,13 +19,13 @@
     Shortest Comment Line: 23 [# -*- coding: utf-8 ...]
 
                   Imports: 4
-                Functions: 9
+                Functions: 10
                   Classes: 0
             If Statements: 2
            Try Statements: 0
         Except Statements: 0
          Print Statements: 0
-              Assignments: 29
+              Assignments: 31
                 Variables: 5
 
 
@@ -82,7 +82,7 @@
               Doc Strings: 0
            Total Comments: 7
 
-        Longest Code Line: 71
+        Longest Code Line: 67
        Shortest Code Line: 1 [)]
 
      Longest Comment Line: 50
@@ -106,12 +106,12 @@
 
   Analyzing: https://github.com/c0ding/worldcoin-api/blob/master/tests/test_worldcoin.py
 
-              Total Lines: 47
+              Total Lines: 51
 
-               Code Lines: 34 (72.3404%)
-              Blank Lines: 12 (25.5319%)
+               Code Lines: 37 (72.5490%)
+              Blank Lines: 13 (25.4901%)
 
-            Comment Lines: 1 (2.12765%)
+            Comment Lines: 1 (1.96078%)
          Doc String Lines: 0 (0.0%)
           Inline Comments: 1
               Doc Strings: 0
@@ -124,7 +124,7 @@
     Shortest Comment Line: 23 [# -*- coding: utf-8 ...]
 
                   Imports: 4
-                Functions: 8
+                Functions: 9
                   Classes: 1
             If Statements: 1
            Try Statements: 0

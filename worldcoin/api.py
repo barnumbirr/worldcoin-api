@@ -7,7 +7,7 @@ from utils import exchange
 from utils import blockexplorer
 
 __title__   = 'worldcoin'
-__version__ = '0.4'
+__version__ = '0.5'
 __author__  = "@c0ding"
 __repo__    = "https://github.com/c0ding/worldcoin-api"
 __license__ = "Apache v2.0 License"
@@ -16,12 +16,21 @@ __license__ = "Apache v2.0 License"
 def about():
 	return "{} v.{} is maintained by {} and available at {}.".format(__title__, __version__, __author__, __repo__)
 
+
 def difficulty():
 	"""Returns the current network difficulty."""
 
 	d = urllib.urlopen(blockexplorer('coindetails'))
 	d = json.loads(d.read())
 	return d[u'Difficulty']
+
+
+def hashrate():
+	"""Returns the current network hashrate."""
+	
+	d = urllib.urlopen(blockexplorer('coindetails'))
+	d = json.loads(d.read())
+	return d[u'HashRate']
 
 
 def block_count():
@@ -75,7 +84,7 @@ def address(PARAMETER):
 	d = urllib.urlopen(blockexplorer('address') + '/' + str(PARAMETER))
 	d = json.loads(d.read())
 	return json.dumps(d, indent=4)
-	
+
 
 def to_btc():
 	"""Returns array with trading pair object."""
