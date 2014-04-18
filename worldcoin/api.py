@@ -3,14 +3,8 @@
 
 import json
 import urllib
+from utils import exchange
 from utils import blockexplorer
-
-#                        __    __           _     
-#   _      ______  _____/ /___/ /________  (_)___ 
-#  | | /| / / __ \/ ___/ / __  / ___/ __ \/ / __ \
-#  | |/ |/ / /_/ / /  / / /_/ / /__/ /_/ / / / / /
-#  |__/|__/\____/_/  /_/\__,_/\___/\____/_/_/ /_/
-
 
 __title__   = 'worldcoin'
 __version__ = '0.2'
@@ -74,5 +68,21 @@ def get_address(PARAMETER):
 	"""
 
 	d = urllib.urlopen(blockexplorer('address') + '/' + str(PARAMETER))
+	d = json.loads(d.read())
+	return json.dumps(d, indent=4)
+	
+
+def to_btc():
+	"""Returns array with trading pair object."""
+	
+	d = urllib.urlopen(exchange('wdc_btc'))
+	d = json.loads(d.read())
+	return json.dumps(d, indent=4)
+	
+	
+def to_usd():
+	"""Returns array with trading pair object."""
+	
+	d = urllib.urlopen(exchange('wdc_usd'))
 	d = json.loads(d.read())
 	return json.dumps(d, indent=4)

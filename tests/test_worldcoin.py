@@ -28,6 +28,12 @@ class worldcointestsuite(unittest.TestCase):
 
 	def test_get_address(self):
 		assert type(worldcoin.get_address('WYJ142WhSViiCJuUB2JbpbNiCFAuk9B47z')) is str
+		
+	def test_to_btc(self):
+		assert type(worldcoin.to_btc()) is str
+
+	def test_to_usd(self):
+		assert type(worldcoin.to_usd()) is str
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,31 +1,31 @@
   
    Analyzing: https://github.com/c0ding/worldcoin-api/blob/master/worldcoin/api.py
 
-              Total Lines: 78
+              Total Lines: 88
 
-               Code Lines: 35 (44.8717%)
-              Blank Lines: 23 (29.4871%)
+               Code Lines: 44 (50.0%)
+              Blank Lines: 27 (30.6818%)
 
-            Comment Lines: 6 (7.69230%)
-         Doc String Lines: 14 (17.9487%)
+            Comment Lines: 1 (1.13636%)
+         Doc String Lines: 16 (18.1818%)
           Inline Comments: 1
-              Doc Strings: 6
-           Total Comments: 13
+              Doc Strings: 8
+           Total Comments: 10
 
-        Longest Code Line: 109
+        Longest Code Line: 111
        Shortest Code Line: 19 [return d[u'Blocks']]
 
-     Longest Comment Line: 50
-    Shortest Comment Line: 49 [#  |__/|__/\____/_/ ...]
+     Longest Comment Line: 23
+    Shortest Comment Line: 23 [# -*- coding: utf-8 ...]
 
-                  Imports: 3
-                Functions: 7
+                  Imports: 4
+                Functions: 9
                   Classes: 0
             If Statements: 0
            Try Statements: 0
         Except Statements: 0
          Print Statements: 0
-              Assignments: 20
+              Assignments: 26
                 Variables: 5
 
 
@@ -36,32 +36,32 @@
 
   Analyzing: https://github.com/c0ding/worldcoin-api/blob/master/worldcoin/utils.py
 
-              Total Lines: 12
+              Total Lines: 21
 
-               Code Lines: 4 (33.3333%)
-              Blank Lines: 3 (25.0%)
+               Code Lines: 7 (33.3333%)
+              Blank Lines: 5 (23.8095%)
 
-            Comment Lines: 1 (8.33333%)
-         Doc String Lines: 4 (33.3333%)
+            Comment Lines: 1 (4.76190%)
+         Doc String Lines: 8 (38.0952%)
           Inline Comments: 1
-              Doc Strings: 1
-           Total Comments: 3
+              Doc Strings: 2
+           Total Comments: 4
 
-        Longest Code Line: 64
+        Longest Code Line: 71
        Shortest Code Line: 21 [#!/usr/bin/env pytho...]
 
      Longest Comment Line: 23
     Shortest Comment Line: 23 [# -*- coding: utf-8 ...]
 
                   Imports: 0
-                Functions: 1
+                Functions: 2
                   Classes: 0
             If Statements: 0
            Try Statements: 0
         Except Statements: 0
          Print Statements: 0
-              Assignments: 1
-                Variables: 1
+              Assignments: 2
+                Variables: 2
 
 
   Done analyzing: https://github.com/c0ding/worldcoin-api/blob/master/worldcoin/utils.py
@@ -71,22 +71,22 @@
 
   Analyzing: https://github.com/c0ding/worldcoin-api/blob/master/worldcoin/__init__.py
 
-              Total Lines: 8
+              Total Lines: 21
 
-               Code Lines: 6 (75.0%)
-              Blank Lines: 1 (12.5%)
+               Code Lines: 11 (52.3809%)
+              Blank Lines: 4 (19.0476%)
 
-            Comment Lines: 1 (12.5%)
+            Comment Lines: 6 (28.5714%)
          Doc String Lines: 0 (0.0%)
           Inline Comments: 1
               Doc Strings: 0
-           Total Comments: 2
+           Total Comments: 7
 
         Longest Code Line: 71
        Shortest Code Line: 1 [)]
 
-     Longest Comment Line: 23
-    Shortest Comment Line: 23 [# -*- coding: utf-8 ...]
+     Longest Comment Line: 50
+    Shortest Comment Line: 49 [#  |__/|__/\____/_/ ...]
 
                   Imports: 2
                 Functions: 0
@@ -95,8 +95,8 @@
            Try Statements: 0
         Except Statements: 0
          Print Statements: 0
-              Assignments: 0
-                Variables: 0
+              Assignments: 5
+                Variables: 2
 
 
   Done analyzing: https://github.com/c0ding/worldcoin-api/blob/master/worldcoin/__init__.py
@@ -106,12 +106,12 @@
 
   Analyzing: https://github.com/c0ding/worldcoin-api/blob/master/tests/test_worldcoin.py
 
-              Total Lines: 33
+              Total Lines: 39
 
-               Code Lines: 22 (66.6666%)
-              Blank Lines: 10 (30.3030%)
+               Code Lines: 26 (66.6666%)
+              Blank Lines: 12 (30.7692%)
 
-            Comment Lines: 1 (3.03030%)
+            Comment Lines: 1 (2.56410%)
          Doc String Lines: 0 (0.0%)
           Inline Comments: 1
               Doc Strings: 0
@@ -124,7 +124,7 @@
     Shortest Comment Line: 23 [# -*- coding: utf-8 ...]
 
                   Imports: 4
-                Functions: 6
+                Functions: 8
                   Classes: 1
             If Statements: 1
            Try Statements: 0
