@@ -1,0 +1,8 @@
+STATS
+COPYING
+setup.py
+README.md
+worldcoin/__init__.py
+tests/worldcoin_tests.py
+worldcoin/worldcoin_api.py
+worldcoin/worldcoin_utils.py

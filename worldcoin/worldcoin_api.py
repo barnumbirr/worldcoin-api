@@ -7,7 +7,7 @@ from worldcoin_utils import exchange
 from worldcoin_utils import blockexplorer
 
 __title__   = 'worldcoin'
-__version__ = '0.5'
+__version__ = '0.5.1'
 __author__  = "@c0ding"
 __repo__    = "https://github.com/c0ding/worldcoin-api"
 __license__ = "Apache v2.0 License"
@@ -58,12 +58,10 @@ def block_hash(PARAMETER=None):
 	"""
 	if not PARAMETER:
 		d = urllib.urlopen(blockexplorer('block'))
-		d = json.loads(d.read())
-		return json.dumps(d, indent=4)
+		return json.loads(d.read())
 	else:
 		d = urllib.urlopen(blockexplorer('block') + '/' + str(PARAMETER))
-		d = json.loads(d.read())
-		return json.dumps(d, indent=4)
+		return json.loads(d.read())
 	
 
 def transaction(PARAMETER):
@@ -72,8 +70,7 @@ def transaction(PARAMETER):
 	"""
 
 	d = urllib.urlopen(blockexplorer('transaction') + '/' + str(PARAMETER))
-	d = json.loads(d.read())
-	return json.dumps(d, indent=4)
+	return json.loads(d.read())
 
 
 def address(PARAMETER):
@@ -82,21 +79,19 @@ def address(PARAMETER):
 	"""
 
 	d = urllib.urlopen(blockexplorer('address') + '/' + str(PARAMETER))
-	d = json.loads(d.read())
-	return json.dumps(d, indent=4)
+	return json.loads(d.read())
 
 
 def to_btc():
 	"""Returns array with trading pair object."""
 	
 	d = urllib.urlopen(exchange('wdc_btc'))
-	d = json.loads(d.read())
-	return json.dumps(d, indent=4)
+	return json.loads(d.read())
 	
 	
 def to_usd():
 	"""Returns array with trading pair object."""
 	
 	d = urllib.urlopen(exchange('wdc_usd'))
-	d = json.loads(d.read())
-	return json.dumps(d, indent=4)
+	return json.loads(d.read())
+
