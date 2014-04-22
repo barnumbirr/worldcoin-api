@@ -9,13 +9,13 @@
 
 
 __title__   = 'worldcoin'
-__version__ = '0.5.1'
+__version__ = '0.5.2'
 __author__  = "@c0ding"
 __repo__    = "https://github.com/c0ding/worldcoin-api"
 __license__ = "Apache v2.0 License"
 
 import worldcoin_utils
 from worldcoin_api import (
-	about, difficulty, hashrate, block_count, total_coins, block_hash,
-	transaction, address, to_btc, to_usd
+	about, difficulty, hashrate, block_count, total_coins, reward,
+	block_hash, transaction, address, to_btc, to_usd
 )

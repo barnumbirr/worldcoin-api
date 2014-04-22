@@ -8,7 +8,7 @@ import unittest
 import worldcoin
 
 __title__   = 'worldcoin'
-__version__ = '0.5.1'
+__version__ = '0.5.2'
 __author__  = "@c0ding"
 __repo__    = "https://github.com/c0ding/worldcoin-api"
 __license__ = "Apache v2.0 License"
@@ -32,6 +32,10 @@ class worldcointestsuite(unittest.TestCase):
 	def test_total_coins(self):
 		worldcoin.total_coins()
 		assert type(worldcoin.total_coins()) is float
+		
+	def test_reward(self):
+		worldcoin.reward()
+		assert type(worldcoin.reward()) is float
 	
 	def test_block_hash(self):
 		worldcoin.block_hash()

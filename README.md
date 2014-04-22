@@ -55,6 +55,13 @@ This API can currently retrieve the following stats from [worldcoinexplorer.com]
 52455474.3611
 ```
 
+  - Block reward:
+
+```
+>>> worldcoin.reward()
+46.86741576
+```
+
 ### Blocks:
 
   - Block hash:

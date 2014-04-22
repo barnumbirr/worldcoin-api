@@ -7,7 +7,7 @@ from worldcoin_utils import exchange
 from worldcoin_utils import blockexplorer
 
 __title__   = 'worldcoin'
-__version__ = '0.5.1'
+__version__ = '0.5.2'
 __author__  = "@c0ding"
 __repo__    = "https://github.com/c0ding/worldcoin-api"
 __license__ = "Apache v2.0 License"
@@ -49,6 +49,18 @@ def total_coins():
 	d = urllib.urlopen(blockexplorer('coindetails'))
 	d = json.loads(d.read())
 	return d[u'TotalCoins']
+
+	
+def reward():
+	"""Returns the current block reward."""
+
+	d = block_hash()
+	e = d[u'Transactions']
+	for item in e:
+		f = transaction(item)
+		g = f[u'Outputs']
+		reward = g[0]['Amount']
+		return reward
 
 
 def block_hash(PARAMETER=None):
@@ -94,4 +106,3 @@ def to_usd():
 	
 	d = urllib.urlopen(exchange('wdc_usd'))
 	return json.loads(d.read())
-
