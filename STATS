@@ -1,16 +1,16 @@
   
    Analyzing: https://github.com/c0ding/worldcoin-api/blob/master/worldcoin/worldcoin_api.py
 
-              Total Lines: 108
+              Total Lines: 111
 
-               Code Lines: 55 (50.9259%)
-              Blank Lines: 33 (30.5555%)
+               Code Lines: 55 (49.5495%)
+              Blank Lines: 35 (31.5315%)
 
-            Comment Lines: 1 (0.92592%)
-         Doc String Lines: 19 (17.5925%)
+            Comment Lines: 1 (0.90090%)
+         Doc String Lines: 20 (18.0180%)
           Inline Comments: 1
-              Doc Strings: 10
-           Total Comments: 12
+              Doc Strings: 11
+           Total Comments: 13
 
         Longest Code Line: 111
        Shortest Code Line: 13 [return reward]

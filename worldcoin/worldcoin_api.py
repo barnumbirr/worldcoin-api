@@ -8,13 +8,15 @@ from worldcoin_utils import blockexplorer
 
 __title__   = 'worldcoin'
 __version__ = '0.5.2'
-__author__  = "@c0ding"
-__repo__    = "https://github.com/c0ding/worldcoin-api"
-__license__ = "Apache v2.0 License"
+__author__  = '@c0ding'
+__repo__    = 'https://github.com/c0ding/worldcoin-api'
+__license__ = 'Apache v2.0 License'
 
 
 def about():
-	return "{} v.{} is maintained by {} and available at {}.".format(__title__, __version__, __author__, __repo__)
+	"""Returns some information about the worldcoin module."""
+
+	return '{} v.{} is maintained by {} and available at {}.'.format(__title__, __version__, __author__, __repo__)
 
 
 def difficulty():
@@ -68,6 +70,7 @@ def block_hash(PARAMETER=None):
 	   [PARAMETER] is optional, should be a block hash or height.
 	   [DEFAULT] equals to last block.
 	"""
+
 	if not PARAMETER:
 		d = urllib.urlopen(blockexplorer('block'))
 		return json.loads(d.read())

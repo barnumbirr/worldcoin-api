@@ -178,8 +178,8 @@ This API can currently retrieve the following stats from [worldcoinexplorer.com]
 
 * [Worldcoin Alliance](http://www.worldcoinalliance.net/)
 * [Worldcoin Forum](http://worldcoinforum.org/)
-* [worldcoinexplorer.com](http://www.worldcoinexplorer.com/)
 * [Worldcoin Wiki](http://www.wdcwiki.org/wiki/Main_Page)
+* [worldcoinexplorer.com](http://www.worldcoinexplorer.com/)
 
 ## Buy me a coffee?
 

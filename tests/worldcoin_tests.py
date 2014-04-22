@@ -9,9 +9,9 @@ import worldcoin
 
 __title__   = 'worldcoin'
 __version__ = '0.5.2'
-__author__  = "@c0ding"
-__repo__    = "https://github.com/c0ding/worldcoin-api"
-__license__ = "Apache v2.0 License"
+__author__  = '@c0ding'
+__repo__    = 'https://github.com/c0ding/worldcoin-api'
+__license__ = 'Apache v2.0 License'
 
 class worldcointestsuite(unittest.TestCase):
 
