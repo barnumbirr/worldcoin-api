@@ -8,7 +8,7 @@ import unittest
 import worldcoin
 
 __title__   = 'worldcoin'
-__version__ = '0.5.2'
+__version__ = '0.6'
 __author__  = '@c0ding'
 __repo__    = 'https://github.com/c0ding/worldcoin-api'
 __license__ = 'Apache v2.0 License'
@@ -52,6 +52,10 @@ class worldcointestsuite(unittest.TestCase):
 	def test_to_btc(self):
 		worldcoin.to_btc()
 		assert type(worldcoin.to_btc()) is dict
+		
+	def test_to_ltc(self):
+		worldcoin.to_ltc()
+		assert type(worldcoin.to_ltc()) is dict
 
 	def test_to_usd(self):
 		worldcoin.to_usd()

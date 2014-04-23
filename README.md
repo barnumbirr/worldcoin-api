@@ -138,6 +138,22 @@ This API can currently retrieve the following stats from [worldcoinexplorer.com]
 }
 ```
 
+  - LTC:
+
+```
+>>> worldcoin.to_ltc()
+{
+    "latest_trade": "2014-04-22 21:18:55", 
+    "volume_btc": "2.13", 
+    "price": "0.00335412", 
+    "price_before_24h": "0.00340005", 
+    "volume_first": "25139.6915261745", 
+    "best_market": "cryptsy", 
+    "volume_second": "84.9153636898845", 
+    "id": "wdc/ltc"
+}
+```
+
   - USD:
 
 ```

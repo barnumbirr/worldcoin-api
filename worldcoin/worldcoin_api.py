@@ -7,7 +7,7 @@ from worldcoin_utils import exchange
 from worldcoin_utils import blockexplorer
 
 __title__   = 'worldcoin'
-__version__ = '0.5.2'
+__version__ = '0.6'
 __author__  = '@c0ding'
 __repo__    = 'https://github.com/c0ding/worldcoin-api'
 __license__ = 'Apache v2.0 License'
@@ -102,8 +102,15 @@ def to_btc():
 	
 	d = urllib.urlopen(exchange('wdc_btc'))
 	return json.loads(d.read())
+
+
+def to_ltc():
+	"""Returns array with trading pair object."""
 	
-	
+	d = urllib.urlopen(exchange('wdc_ltc'))
+	return json.loads(d.read())
+
+
 def to_usd():
 	"""Returns array with trading pair object."""
 	
