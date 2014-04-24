@@ -202,5 +202,7 @@ This API can currently retrieve the following stats from [worldcoinexplorer.com]
 If you feel like buying me a coffee (or a beer?), donations are welcome:
 
 ```
-WbcWJzVD8yXt3yLnnkCZtwQo4YgSUdELkj
+WDC : WbcWJzVD8yXt3yLnnkCZtwQo4YgSUdELkj
+HBN : F2Zs4igv8r4oJJzh4sh4bGmeqoUxLQHPki
+DOGE: DRBkryyau5CMxpBzVmrBAjK6dVdMZSBsuS
 ```
