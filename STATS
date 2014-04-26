@@ -36,32 +36,32 @@
 
   Analyzing: https://github.com/c0ding/worldcoin-api/blob/master/worldcoin/worldcoin_utils.py
 
-              Total Lines: 21
+              Total Lines: 184
 
-               Code Lines: 7 (33.3333%)
-              Blank Lines: 5 (23.8095%)
+               Code Lines: 147 (79.8913%)
+              Blank Lines: 28 (15.2173%)
 
-            Comment Lines: 1 (4.76190%)
-         Doc String Lines: 8 (38.0952%)
+            Comment Lines: 1 (0.54347%)
+         Doc String Lines: 8 (4.34782%)
           Inline Comments: 1
               Doc Strings: 2
            Total Comments: 4
 
-        Longest Code Line: 71
-       Shortest Code Line: 21 [#!/usr/bin/env pytho...]
+        Longest Code Line: 78
+       Shortest Code Line: 8 [return k]
 
      Longest Comment Line: 23
     Shortest Comment Line: 23 [# -*- coding: utf-8 ...]
 
-                  Imports: 0
-                Functions: 2
-                  Classes: 0
-            If Statements: 0
+                  Imports: 5
+                Functions: 21
+                  Classes: 1
+            If Statements: 17
            Try Statements: 0
         Except Statements: 0
-         Print Statements: 0
-              Assignments: 2
-                Variables: 2
+         Print Statements: 1
+              Assignments: 65
+                Variables: 46
 
 
   Done analyzing: https://github.com/c0ding/worldcoin-api/blob/master/worldcoin/worldcoin_utils.py
@@ -71,12 +71,12 @@
 
   Analyzing: https://github.com/c0ding/worldcoin-api/blob/master/worldcoin/__init__.py
 
-              Total Lines: 21
+              Total Lines: 23
 
-               Code Lines: 11 (52.3809%)
-              Blank Lines: 4 (19.0476%)
+               Code Lines: 13 (56.5217%)
+              Blank Lines: 4 (17.3913%)
 
-            Comment Lines: 6 (28.5714%)
+            Comment Lines: 6 (26.0869%)
          Doc String Lines: 0 (0.0%)
           Inline Comments: 1
               Doc Strings: 0

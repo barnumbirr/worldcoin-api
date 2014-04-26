@@ -170,6 +170,18 @@ This API can currently retrieve the following stats from [worldcoinexplorer.com]
 }
 ```
 
+### Work in progress:
+
+  - Address/private key generation :
+
+```
+>>> worldcoin.generate_address()
+{
+    "address": "WmZs8FY7TWpqhNM917zYVLV2QM5RFpvdTC", 
+    "private_key": "WsSBJ5tfLcoNbNKy8Y1NoQWisub4gDz13DEa8h4ppV6VVWHn28Gx" 
+}
+```
+
 ## License:
 
 ```
