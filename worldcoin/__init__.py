@@ -9,15 +9,14 @@
 
 
 __title__   = 'worldcoin'
-__version__ = '0.6'
+__version__ = '1.0'
 __author__  = '@c0ding'
 __repo__    = 'https://github.com/c0ding/worldcoin-api'
 __license__ = 'Apache v2.0 License'
 
-from worldcoin_utils import (
-	blockexplorer, exchange, generate_address
-)
+import worldcoin_utils
 from worldcoin_api import (
 	about, difficulty, hashrate, block_count, total_coins, reward,
-	block_hash, transaction, address, to_btc, to_ltc, to_usd
+	block_hash, transaction, address, generate_address, to_btc,
+	to_ltc, to_usd
 )

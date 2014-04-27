@@ -7,11 +7,19 @@ import ctypes
 import hashlib
 import ctypes.util
 
+"""This part of the code is where the magic happens.
+   # Joric/bitcoin-dev, june 2012, public domain
+   # modified by c0ding, 2014
+"""
+
+
 ssl = ctypes.cdll.LoadLibrary (ctypes.util.find_library ('ssl') or 'libeay32')
+
 
 def check_result (val, func, args):
 	if val == 0: raise ValueError 
 	else: return ctypes.c_void_p (val)
+
 
 ssl.EC_KEY_new_by_curve_name.restype = ctypes.c_void_p
 ssl.EC_KEY_new_by_curve_name.errcheck = check_result
@@ -23,11 +31,13 @@ class KEY:
 		self.compressed = False
 		self.POINT_CONVERSION_COMPRESSED = 2
 		self.POINT_CONVERSION_UNCOMPRESSED = 4
+
 		
 	def __del__(self):
 		if ssl:
 			ssl.EC_KEY_free(self.k)
 		self.k = None
+
 		
 	def generate(self, secret=None):
 		if secret:
@@ -45,11 +55,13 @@ class KEY:
 		else:
 			return ssl.EC_KEY_generate_key(self.k)
 
+
 	def get_pubkey(self):
 		size = ssl.i2o_ECPublicKey(self.k, 0)
 		mb = ctypes.create_string_buffer(size)
 		ssl.i2o_ECPublicKey(self.k, ctypes.byref(ctypes.pointer(mb)))
 		return mb.raw
+
 		
 	def get_secret(self):
 		bn = ssl.EC_KEY_get0_private_key(self.k);
@@ -57,6 +69,7 @@ class KEY:
 		mb = ctypes.create_string_buffer(bytes)
 		n = ssl.BN_bn2bin(bn, mb);
 		return mb.raw.rjust(32, chr(0))
+
 		
 	def set_compressed(self, compressed):
 		self.compressed = compressed
@@ -65,16 +78,20 @@ class KEY:
 		else:
 			form = self.POINT_CONVERSION_UNCOMPRESSED
 		ssl.EC_KEY_set_conv_form(self.k, form)
+
 		
 def dhash(s):
 	return hashlib.sha256(hashlib.sha256(s).digest()).digest()
+
 	
 def rhash(s):
 	h1 = hashlib.new('ripemd160')
 	h1.update(hashlib.sha256(s).digest())
 	return h1.digest()
 
+
 b58_digits = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'
+
 
 def base58_encode(n):
 	l = []
@@ -83,6 +100,7 @@ def base58_encode(n):
 		l.insert(0,(b58_digits[r]))
 	return ''.join(l)
 
+
 def base58_decode(s):
 	n = 0
 	for ch in s:
@@ -90,6 +108,7 @@ def base58_decode(s):
 		digit = b58_digits.index(ch)
 		n += digit
 	return n
+
 
 def base58_encode_padded(s):
 	res = base58_encode(int('0x' + s.encode('hex'), 16))
@@ -100,6 +119,7 @@ def base58_encode_padded(s):
 		else:
 			break
 	return b58_digits[0] * pad + res
+
 
 def base58_decode_padded(s):
 	pad = 0
@@ -114,10 +134,12 @@ def base58_decode_padded(s):
 	res = h.decode('hex')
 	return chr(0) * pad + res
 
+
 def base58_check_encode(s, version=0):
 	vs = chr(version) + s
 	check = dhash(vs)[:4]
 	return base58_encode_padded(vs + check)
+
 
 def base58_check_decode(s, version=0):
 	k = base58_decode_padded(s)
@@ -128,6 +150,7 @@ def base58_check_decode(s, version=0):
 	if version != ord(v0):
 		raise BaseException('version mismatch')
 	return data
+
 
 def gen_eckey(passphrase=None, secret=None, pkey=None, compressed=False, rounds=1, version=0):
 	k = KEY()
@@ -143,6 +166,7 @@ def gen_eckey(passphrase=None, secret=None, pkey=None, compressed=False, rounds=
 	k.set_compressed(compressed)
 	return k
 
+
 def get_addr(k,version=0):
 	pubkey = k.get_pubkey()
 	secret = k.get_secret()
@@ -154,6 +178,7 @@ def get_addr(k,version=0):
 	pkey = base58_check_encode(payload, 128+version)
 	return json.dumps({'address': addr, 'private_key': pkey}, sort_keys=True)
 
+
 def reencode(pkey,version=0):
 	payload = base58_check_decode(pkey,128+version)
 	secret = payload[:-1]
@@ -161,8 +186,6 @@ def reencode(pkey,version=0):
 	pkey = base58_check_encode(payload, 128+version)
 	print get_addr(gen_eckey(pkey))
 
-def generate_address():
-	return get_addr(gen_eckey(compressed=True,version=73),version=73)
 
 OFFICIAL_BLOCKEXPLORER = 'http://www.worldcoinexplorer.com/api/'
 CRYPTOCOIN_API = 'http://www.cryptocoincharts.info/v2/api/tradingPair/'
@@ -174,6 +197,7 @@ def blockexplorer(*suffix):
 	"""
 	
 	return OFFICIAL_BLOCKEXPLORER + '/'.join(suffix)
+
 
 def exchange(*suffix):
 	"""Returns the entrypoint URL for the Worldcoin price API.

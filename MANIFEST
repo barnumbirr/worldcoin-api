@@ -6,3 +6,4 @@ worldcoin/__init__.py
 tests/worldcoin_tests.py
 worldcoin/worldcoin_api.py
 worldcoin/worldcoin_utils.py
+examples/worldcoin_per_day.py

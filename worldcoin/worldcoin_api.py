@@ -3,11 +3,13 @@
 
 import json
 import urllib
+from worldcoin_utils import get_addr
 from worldcoin_utils import exchange
+from worldcoin_utils import gen_eckey
 from worldcoin_utils import blockexplorer
 
 __title__   = 'worldcoin'
-__version__ = '0.6'
+__version__ = '1.0'
 __author__  = '@c0ding'
 __repo__    = 'https://github.com/c0ding/worldcoin-api'
 __license__ = 'Apache v2.0 License'
@@ -95,6 +97,15 @@ def address(PARAMETER):
 
 	d = urllib.urlopen(blockexplorer('address') + '/' + str(PARAMETER))
 	return json.loads(d.read())
+
+
+def generate_address():
+	"""Returns a valid Worldcoin address and it's
+	   matching private key.
+	   On OSX run this in i386 mode.
+	"""
+
+	return get_addr(gen_eckey(compressed=True,version=73),version=73)
 
 
 def to_btc():

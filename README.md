@@ -120,6 +120,16 @@ This API can currently retrieve the following stats from [worldcoinexplorer.com]
 }
 ```
 
+  - Address/private key generation :
+
+```
+>>> worldcoin.generate_address()
+{
+    "address": "WmZs8FY7TWpqhNM917zYVLV2QM5RFpvdTC", 
+    "private_key": "WsSBJ5tfLcoNbNKy8Y1NoQWisub4gDz13DEa8h4ppV6VVWHn28Gx" 
+}
+```
+
 ### Exchanges:
 
   - BTC:
@@ -167,18 +177,6 @@ This API can currently retrieve the following stats from [worldcoinexplorer.com]
     "best_market": "crypto-trade", 
     "volume_second": "21.4769533276558", 
     "id": "wdc/usd"
-}
-```
-
-### Work in progress:
-
-  - Address/private key generation :
-
-```
->>> worldcoin.generate_address()
-{
-    "address": "WmZs8FY7TWpqhNM917zYVLV2QM5RFpvdTC", 
-    "private_key": "WsSBJ5tfLcoNbNKy8Y1NoQWisub4gDz13DEa8h4ppV6VVWHn28Gx" 
 }
 ```
 

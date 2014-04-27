@@ -8,7 +8,7 @@ import unittest
 import worldcoin
 
 __title__   = 'worldcoin'
-__version__ = '0.6'
+__version__ = '1.0'
 __author__  = '@c0ding'
 __repo__    = 'https://github.com/c0ding/worldcoin-api'
 __license__ = 'Apache v2.0 License'
@@ -48,6 +48,10 @@ class worldcointestsuite(unittest.TestCase):
 	def test_address(self):
 		worldcoin.address('WYJ142WhSViiCJuUB2JbpbNiCFAuk9B47z')
 		assert type(worldcoin.address('WYJ142WhSViiCJuUB2JbpbNiCFAuk9B47z')) is dict
+
+	def test_generate_address(self):
+		worldcoin.generate_address()
+		assert type(worldcoin.generate_address()) is str
 		
 	def test_to_btc(self):
 		worldcoin.to_btc()
