@@ -9,7 +9,7 @@ from worldcoin_utils import gen_eckey
 from worldcoin_utils import blockexplorer
 
 __title__   = 'worldcoin'
-__version__ = '1.0'
+__version__ = '1.0.1'
 __author__  = '@c0ding'
 __repo__    = 'https://github.com/c0ding/worldcoin-api'
 __license__ = 'Apache v2.0 License'
@@ -58,13 +58,9 @@ def total_coins():
 def reward():
 	"""Returns the current block reward."""
 
-	d = block_hash()
-	e = d[u'Transactions']
-	for item in e:
-		f = transaction(item)
-		g = f[u'Outputs']
-		reward = g[0]['Amount']
-		return reward
+	d = urllib.urlopen(blockexplorer('coindetails'))
+	d = json.loads(d.read())
+	return d[u'Reward']
 
 
 def block_hash(PARAMETER=None):

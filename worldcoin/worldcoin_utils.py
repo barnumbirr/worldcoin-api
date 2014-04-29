@@ -12,7 +12,6 @@ import ctypes.util
    # modified by c0ding, 2014
 """
 
-
 ssl = ctypes.cdll.LoadLibrary (ctypes.util.find_library ('ssl') or 'libeay32')
 
 
