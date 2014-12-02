@@ -187,7 +187,7 @@ def reencode(pkey,version=0):
 
 
 OFFICIAL_BLOCKEXPLORER = 'http://www.worldcoinexplorer.com/api/'
-CRYPTOCOIN_API = 'http://www.cryptocoincharts.info/v2/api/tradingPair/'
+CRYPTOCOIN_API = 'http://api.cryptocoincharts.info/tradingPair/'
 
 def blockexplorer(*suffix):
 	"""Returns the entrypoint URL for the Worldcoin block API.
