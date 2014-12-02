@@ -7,6 +7,12 @@ import ctypes
 import hashlib
 import ctypes.util
 
+__title__   = 'worldcoin'
+__version__ = '1.0.2'
+__author__  = '@c0ding'
+__repo__    = 'https://github.com/c0ding/worldcoin-api'
+__license__ = 'Apache v2.0 License'
+
 """This part of the code is where the magic happens.
    # Joric/bitcoin-dev, june 2012, public domain
    # modified by c0ding, 2014
