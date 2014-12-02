@@ -5,7 +5,7 @@ from distutils.core import setup
 
 setup(
     name = 'worldcoin',
-    version = '1.0.1',
+    version = '1.0.2',
     url = 'https://github.com/c0ding/worldcoin-api',
     download_url = 'https://github.com/c0ding/worldcoin-api/archive/master.zip',
     author = 'c0ding',
