@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import json
-import urllib
+import urllib2
 from worldcoin_utils import get_addr
 from worldcoin_utils import exchange
 from worldcoin_utils import gen_eckey
@@ -15,6 +15,9 @@ __repo__    = 'https://github.com/c0ding/worldcoin-api'
 __license__ = 'Apache v2.0 License'
 
 
+BROWSER_HEADER = {'User-Agent' : 'Mozilla/5.0 (X11; Linux i586; rv:31.0) Gecko/20100101 Firefox/36.0'}
+
+
 def about():
 	"""Returns some information about the worldcoin module."""
 
@@ -24,7 +27,7 @@ def about():
 def difficulty():
 	"""Returns the current network difficulty."""
 
-	d = urllib.urlopen(blockexplorer('coindetails'))
+	d = urllib2.urlopen(blockexplorer('coindetails'))
 	d = json.loads(d.read())
 	return d[u'Difficulty']
 
@@ -32,7 +35,7 @@ def difficulty():
 def hashrate():
 	"""Returns the current network hashrate."""
 	
-	d = urllib.urlopen(blockexplorer('coindetails'))
+	d = urllib2.urlopen(blockexplorer('coindetails'))
 	d = json.loads(d.read())
 	return d[u'HashRate']
 
@@ -42,7 +45,7 @@ def block_count():
 	   Equivalent to Bitcoin's getblockcount.
 	"""
 
-	d = urllib.urlopen(blockexplorer('coindetails'))
+	d = urllib2.urlopen(blockexplorer('coindetails'))
 	d = json.loads(d.read())
 	return d[u'Blocks']
 
@@ -50,7 +53,7 @@ def block_count():
 def total_coins():
 	"""Returns the number of Worldcoin mined."""
 	
-	d = urllib.urlopen(blockexplorer('coindetails'))
+	d = urllib2.urlopen(blockexplorer('coindetails'))
 	d = json.loads(d.read())
 	return d[u'TotalCoins']
 
@@ -58,7 +61,7 @@ def total_coins():
 def reward():
 	"""Returns the current block reward."""
 
-	d = urllib.urlopen(blockexplorer('coindetails'))
+	d = urllib2.urlopen(blockexplorer('coindetails'))
 	d = json.loads(d.read())
 	return d[u'Reward']
 
@@ -70,10 +73,10 @@ def block_hash(PARAMETER=None):
 	"""
 
 	if not PARAMETER:
-		d = urllib.urlopen(blockexplorer('block'))
+		d = urllib2.urlopen(blockexplorer('block'))
 		return json.loads(d.read())
 	else:
-		d = urllib.urlopen(blockexplorer('block') + '/' + str(PARAMETER))
+		d = urllib2.urlopen(blockexplorer('block') + '/' + str(PARAMETER))
 		return json.loads(d.read())
 	
 
@@ -82,7 +85,7 @@ def transaction(PARAMETER):
 	   [PARAMETER] is required and should be a transaction hash.
 	"""
 
-	d = urllib.urlopen(blockexplorer('transaction') + '/' + str(PARAMETER))
+	d = urllib2.urlopen(blockexplorer('transaction') + '/' + str(PARAMETER))
 	return json.loads(d.read())
 
 
@@ -91,7 +94,7 @@ def address(PARAMETER):
 	   [PARAMETER] is required and should be an address hash.
 	"""
 
-	d = urllib.urlopen(blockexplorer('address') + '/' + str(PARAMETER))
+	d = urllib2.urlopen(blockexplorer('address') + '/' + str(PARAMETER))
 	return json.loads(d.read())
 
 
@@ -107,19 +110,22 @@ def generate_address():
 def to_btc():
 	"""Returns array with trading pair object."""
 	
-	d = urllib.urlopen(exchange('wdc_btc'))
+	c = urllib2.Request(exchange('wdc_btc'), headers = BROWSER_HEADER)
+	d = urllib2.urlopen(c)
 	return json.loads(d.read())
 
 
 def to_ltc():
 	"""Returns array with trading pair object."""
 	
-	d = urllib.urlopen(exchange('wdc_ltc'))
+	c = urllib2.Request(exchange('wdc_ltc'), headers = BROWSER_HEADER)
+	d = urllib2.urlopen(c)
 	return json.loads(d.read())
 
 
 def to_usd():
 	"""Returns array with trading pair object."""
 	
-	d = urllib.urlopen(exchange('wdc_usd'))
+	c = urllib2.Request(exchange('wdc_usd'), headers = BROWSER_HEADER)
+	d = urllib2.urlopen(c)
 	return json.loads(d.read())

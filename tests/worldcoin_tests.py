@@ -23,11 +23,11 @@ class worldcointestsuite(unittest.TestCase):
 		
 	def test_hashrate(self):
 		worldcoin.hashrate()
-		assert type(worldcoin.hashrate()) is int
+		assert type(worldcoin.hashrate()) is int or long
 
 	def test_block_count(self):
 		worldcoin.block_count()
-		assert type(worldcoin.block_count()) is int
+		assert type(worldcoin.block_count()) is int or long
 
 	def test_total_coins(self):
 		worldcoin.total_coins()
