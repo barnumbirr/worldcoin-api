@@ -29,21 +29,23 @@
       </header>
       <section>
         <h1>
-<a name="-worldcoin-api" class="anchor" href="#-worldcoin-api"><span class="octicon octicon-link"></span></a><img src="https://raw.github.com/c0ding/worldcoin-api/master/doc/worldcoin.png" height="55" alt="worldcoin" title="worldcoin"> worldcoin-api</h1>
+<a id="-worldcoin-api" class="anchor" href="#-worldcoin-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<img src="https://raw.github.com/c0ding/worldcoin-api/master/doc/worldcoin.png" height="55" alt="worldcoin" title="worldcoin"> worldcoin-api</h1>
 
-<p><a href="https://pypi.python.org/pypi/worldcoin/"><img src="http://img.shields.io/pypi/v/worldcoin.svg" alt="PyPi Version"></a>   <a href="https://pypi.python.org/pypi/worldcoin/"><img src="http://img.shields.io/pypi/dm/worldcoin.svg" alt="Downloads"></a></p>
+<p><a href="https://pypi.python.org/pypi/worldcoin/"><img src="http://img.shields.io/pypi/v/worldcoin.svg" alt="PyPi Version"></a>   <a href="https://pypi.python.org/pypi/worldcoin/"><img src="http://img.shields.io/pypi/dm/worldcoin.svg" alt="Downloads"></a>
+<a href="http://jenkins.calypso.pm/job/worldcoin-api/"><img src="http://jenkins.calypso.pm/buildStatus/icon?job=worldcoin-api" alt="Build Status"></a></p>
 
 <p>worldcoin is an APACHE licensed library written in Python designed to provide a simple to use API for the Worldcoin cryptocurrency.</p>
 
 <h2>
-<a name="more-about-worldcoin" class="anchor" href="#more-about-worldcoin"><span class="octicon octicon-link"></span></a>More about Worldcoin:</h2>
+<a id="more-about-worldcoin" class="anchor" href="#more-about-worldcoin" aria-hidden="true"><span class="octicon octicon-link"></span></a>More about Worldcoin:</h2>
 
 <p>WorldCoin is designed to be the digital currency of the future. At the forefront is it's' blazing fast speed. Your transaction will be fully confirmed in about 60 seconds or less.</p>
 
 <p>The major goal is to become the cryptocurrency of choice for merchants and consumers for their everyday transaction, whether it be a cup of coffee or a bigger ticket item. Speed and security makes all of this possible. Blazing fast speeds make WorldCoin the best way to pay for everyday transactions. Transactions are fully confirmed in about 60 seconds. Transfer money to your friends and family instantly with just a few clicks. WorldCoin is also based on sound money principals which makes it the smart choice for wealth preservation. It is designed to appreciate in value over time, unlike paper currency. This is due to the fact that only 265 million coins will ever be produced. These advantages are what makes Worldcoin the leading choice for users.</p>
 
 <h2>
-<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation:</h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation:</h2>
 
 <p>From source use</p>
 
@@ -56,52 +58,64 @@
 </code></pre>
 
 <h2>
-<a name="api-documentation" class="anchor" href="#api-documentation"><span class="octicon octicon-link"></span></a>API Documentation:</h2>
+<a id="api-documentation" class="anchor" href="#api-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>API Documentation:</h2>
 
 <p>This API can currently retrieve the following stats from <a href="http://www.worldcoinexplorer.com/">worldcoinexplorer.com</a> and <a href="http://www.cryptocoincharts.info">CryptoCoin</a>:</p>
 
 <h3>
-<a name="network" class="anchor" href="#network"><span class="octicon octicon-link"></span></a>Network:</h3>
+<a id="network" class="anchor" href="#network" aria-hidden="true"><span class="octicon octicon-link"></span></a>Network:</h3>
 
 <ul>
 <li>Difficulty:</li>
-</ul><pre><code>&gt;&gt;&gt; import worldcoin
+</ul>
+
+<pre><code>&gt;&gt;&gt; import worldcoin
 &gt;&gt;&gt; worldcoin.get_difficulty()
 19.12163587
 </code></pre>
 
 <ul>
 <li>Hashrate:</li>
-</ul><pre><code>&gt;&gt;&gt; worldcoin.get_hashrate()
+</ul>
+
+<pre><code>&gt;&gt;&gt; worldcoin.get_hashrate()
 1643421348
 </code></pre>
 
 <ul>
 <li>Block count:</li>
-</ul><pre><code>&gt;&gt;&gt; worldcoin.block_count()
+</ul>
+
+<pre><code>&gt;&gt;&gt; worldcoin.block_count()
 1205465
 </code></pre>
 
 <ul>
 <li>Total coins:</li>
-</ul><pre><code>&gt;&gt;&gt; worldcoin.total_coins()
+</ul>
+
+<pre><code>&gt;&gt;&gt; worldcoin.total_coins()
 52455474.3611
 </code></pre>
 
 <ul>
 <li>Block reward:</li>
-</ul><pre><code>&gt;&gt;&gt; worldcoin.reward()
+</ul>
+
+<pre><code>&gt;&gt;&gt; worldcoin.reward()
 46.86741576
 </code></pre>
 
 <h3>
-<a name="blocks" class="anchor" href="#blocks"><span class="octicon octicon-link"></span></a>Blocks:</h3>
+<a id="blocks" class="anchor" href="#blocks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Blocks:</h3>
 
 <ul>
 <li>Block hash:
 [PARAMETER] is optional, should be a block hash or height.
 [DEFAULT] equals to last block.</li>
-</ul><pre><code>&gt;&gt;&gt; worldcoin.block_hash(PARAMETER)
+</ul>
+
+<pre><code>&gt;&gt;&gt; worldcoin.block_hash(PARAMETER)
 {
     "PreviousBlock": "", 
     "Hash": "1a48c2bf97e0df6d4f03cd5cb0896ef43b04987048fbeb5ab2dc013335e40731", 
@@ -115,12 +129,14 @@
 </code></pre>
 
 <h3>
-<a name="transactions" class="anchor" href="#transactions"><span class="octicon octicon-link"></span></a>Transactions:</h3>
+<a id="transactions" class="anchor" href="#transactions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Transactions:</h3>
 
 <ul>
 <li>Transaction:
 [PARAMETER] is required and should be a transaction hash.</li>
-</ul><pre><code>&gt;&gt;&gt; worldcoin.transaction(PARAMETER)
+</ul>
+
+<pre><code>&gt;&gt;&gt; worldcoin.transaction(PARAMETER)
 {
     "Inputs": [], 
     "Hash": "0fc36e386282295512aa63d9f5047d9dc305c983394803474cfaa2f99d7e1bd0", 
@@ -137,12 +153,14 @@
 </code></pre>
 
 <h3>
-<a name="addresses" class="anchor" href="#addresses"><span class="octicon octicon-link"></span></a>Addresses:</h3>
+<a id="addresses" class="anchor" href="#addresses" aria-hidden="true"><span class="octicon octicon-link"></span></a>Addresses:</h3>
 
 <ul>
 <li>Address:
 [PARAMETER] is required and should be an address hash.</li>
-</ul><pre><code>&gt;&gt;&gt; worldcoin.address(PARAMETER)
+</ul>
+
+<pre><code>&gt;&gt;&gt; worldcoin.address(PARAMETER)
 {
     "RichListRank": 45011, 
     "TotalSent": 32.0, 
@@ -154,7 +172,9 @@
 
 <ul>
 <li>Address/private key generation :</li>
-</ul><pre><code>&gt;&gt;&gt; worldcoin.generate_address()
+</ul>
+
+<pre><code>&gt;&gt;&gt; worldcoin.generate_address()
 {
     "address": "WmZs8FY7TWpqhNM917zYVLV2QM5RFpvdTC", 
     "private_key": "WsSBJ5tfLcoNbNKy8Y1NoQWisub4gDz13DEa8h4ppV6VVWHn28Gx" 
@@ -162,11 +182,13 @@
 </code></pre>
 
 <h3>
-<a name="exchanges" class="anchor" href="#exchanges"><span class="octicon octicon-link"></span></a>Exchanges:</h3>
+<a id="exchanges" class="anchor" href="#exchanges" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exchanges:</h3>
 
 <ul>
 <li>BTC:</li>
-</ul><pre><code>&gt;&gt;&gt; worldcoin.to_btc()
+</ul>
+
+<pre><code>&gt;&gt;&gt; worldcoin.to_btc()
 {
     "latest_trade": "2014-04-18 11:23:30", 
     "volume_btc": "58.24", 
@@ -181,7 +203,9 @@
 
 <ul>
 <li>LTC:</li>
-</ul><pre><code>&gt;&gt;&gt; worldcoin.to_ltc()
+</ul>
+
+<pre><code>&gt;&gt;&gt; worldcoin.to_ltc()
 {
     "latest_trade": "2014-04-22 21:18:55", 
     "volume_btc": "2.13", 
@@ -196,7 +220,9 @@
 
 <ul>
 <li>USD:</li>
-</ul><pre><code>&gt;&gt;&gt; worldcoin.to_usd()
+</ul>
+
+<pre><code>&gt;&gt;&gt; worldcoin.to_usd()
 {
     "latest_trade": "2014-04-18 14:41:33", 
     "volume_btc": "0.04", 
@@ -210,7 +236,7 @@
 </code></pre>
 
 <h2>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License:</h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License:</h2>
 
 <pre><code>  Apache v2.0 License
   Copyright 2014 Martin Simon
@@ -230,15 +256,17 @@
 </code></pre>
 
 <h2>
-<a name="useful-links" class="anchor" href="#useful-links"><span class="octicon octicon-link"></span></a>Useful links:</h2>
+<a id="useful-links" class="anchor" href="#useful-links" aria-hidden="true"><span class="octicon octicon-link"></span></a>Useful links:</h2>
 
 <ul>
 <li><a href="http://www.worldcoinalliance.net/">Worldcoin Alliance</a></li>
 <li><a href="http://worldcoinforum.org/">Worldcoin Forum</a></li>
 <li><a href="http://www.wdcwiki.org/wiki/Main_Page">Worldcoin Wiki</a></li>
 <li><a href="http://www.worldcoinexplorer.com/">worldcoinexplorer.com</a></li>
-</ul><h2>
-<a name="buy-me-a-coffee" class="anchor" href="#buy-me-a-coffee"><span class="octicon octicon-link"></span></a>Buy me a coffee?</h2>
+</ul>
+
+<h2>
+<a id="buy-me-a-coffee" class="anchor" href="#buy-me-a-coffee" aria-hidden="true"><span class="octicon octicon-link"></span></a>Buy me a coffee?</h2>
 
 <p>If you feel like buying me a coffee (or a beer?), donations are welcome:</p>
 
