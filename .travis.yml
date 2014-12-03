@@ -4,4 +4,4 @@ python:
   - "2.7"
 
 script:
-  worldcoin_tests.py
+  python tests/worldcoin_tests.py
