@@ -1,7 +1,6 @@
 <h1><img src="https://raw.github.com/c0ding/worldcoin-api/master/doc/worldcoin.png" height=55 alt="worldcoin" title="worldcoin"> worldcoin-api</h1>
 
 [![PyPi Version](http://img.shields.io/pypi/v/worldcoin.svg)](https://pypi.python.org/pypi/worldcoin/)   [![Downloads](http://img.shields.io/pypi/dm/worldcoin.svg)](https://pypi.python.org/pypi/worldcoin/)
-[![Build Status](http://jenkins.calypso.pm/buildStatus/icon?job=worldcoin-api)](http://jenkins.calypso.pm/job/worldcoin-api/)
 
 worldcoin is an APACHE licensed library written in Python designed to provide a simple to use API for the Worldcoin cryptocurrency.
 
