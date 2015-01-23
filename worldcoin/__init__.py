@@ -7,10 +7,10 @@
 #  | |/ |/ / /_/ / /  / / /_/ / /__/ /_/ / / / / /
 #  |__/|__/\____/_/  /_/\__,_/\___/\____/_/_/ /_/
 
-__title__   = 'worldcoin'
+__title__ = 'worldcoin'
 __version__ = '1.0.2'
-__author__  = '@c0ding'
-__repo__    = 'https://github.com/c0ding/worldcoin-api'
+__author__ = '@c0ding'
+__repo__ = 'https://github.com/c0ding/worldcoin-api'
 __license__ = 'Apache v2.0 License'
 
 from worldcoin_api import (

@@ -4,9 +4,10 @@
 import worldcoin
 
 def estimated_wdc(hashrate):
-	"""Returns an estimated amount of Worldcoins a given
-	   hashrate will yield at a given difficulty and reward.
-	   This profit is NOT guaranteed.
+	"""
+	Returns an estimated amount of Worldcoins a given
+	hashrate will yield at a given difficulty and reward.
+	This profit is NOT guaranteed.
 	"""
 	
 	difficulty = worldcoin.difficulty()
