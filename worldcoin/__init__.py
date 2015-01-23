@@ -13,7 +13,6 @@ __author__  = '@c0ding'
 __repo__    = 'https://github.com/c0ding/worldcoin-api'
 __license__ = 'Apache v2.0 License'
 
-import worldcoin_utils
 from worldcoin_api import (
 	about, difficulty, hashrate, block_count, total_coins, reward,
 	block_hash, transaction, address, generate_address, to_btc,

@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import sys
 import json
 import ctypes
 import hashlib
@@ -14,8 +13,8 @@ __repo__    = 'https://github.com/c0ding/worldcoin-api'
 __license__ = 'Apache v2.0 License'
 
 """This part of the code is where the magic happens.
-   # Joric/bitcoin-dev, june 2012, public domain
-   # modified by c0ding, 2014
+Joric/bitcoin-dev, june 2012, public domain
+modified by c0ding, 2014
 """
 
 ssl = ctypes.cdll.LoadLibrary (ctypes.util.find_library ('ssl') or 'libeay32')
@@ -70,8 +69,8 @@ class KEY:
 		
 	def get_secret(self):
 		bn = ssl.EC_KEY_get0_private_key(self.k);
-		bytes = (ssl.BN_num_bits(bn) + 7) / 8
-		mb = ctypes.create_string_buffer(bytes)
+		_bytes = (ssl.BN_num_bits(bn) + 7) / 8
+		mb = ctypes.create_string_buffer(_bytes)
 		n = ssl.BN_bn2bin(bn, mb);
 		return mb.raw.rjust(32, chr(0))
 
@@ -201,7 +200,7 @@ def blockexplorer(*suffix):
 	   All data provided by the official Worldcoin Blockexplorer.
 	   http://www.worldcoinexplorer.com
 	"""
-	
+
 	return OFFICIAL_BLOCKEXPLORER + '/'.join(suffix)
 
 
@@ -210,5 +209,5 @@ def exchange(*suffix):
 	   All data provided by CryptoCoin.
 	   http://www.cryptocoincharts.info
 	"""
-	
+
 	return CRYPTOCOIN_API + '/'.join(suffix)

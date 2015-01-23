@@ -16,4 +16,4 @@ def estimated_wdc(hashrate):
 	print 'A hashrate of {} khash/s and a difficulty of {} will yield {}WDC per day.'.format(hashrate, difficulty, estimated)
 
 if __name__ == '__main__':
-	estimated_wdc(hashrate)
+	estimated_wdc(2500)
